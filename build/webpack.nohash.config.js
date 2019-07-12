@@ -8,6 +8,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const DashboardPlugin = require("webpack-dashboard/plugin");
 const Jarvis = require("webpack-jarvis");
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 // Asset path
 const ASSET_PATH = process.env.ASSET_PATH || '/';
