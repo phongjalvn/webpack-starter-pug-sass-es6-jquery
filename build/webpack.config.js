@@ -7,7 +7,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const DashboardPlugin = require("webpack-dashboard/plugin");
-const Jarvis = require("webpack-jarvis");
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 // Asset path
@@ -141,9 +140,6 @@ module.exports = env => {
 
     plugins: [
       new DashboardPlugin(),
-      new Jarvis({
-        port: 1337 // optional: set a port
-      }),
       new CopyWebpackPlugin([
         { from: '../manifest.json', to: 'manifest.json' },
         { from: '../browserconfig.xml', to: 'browserconfig.xml' },
