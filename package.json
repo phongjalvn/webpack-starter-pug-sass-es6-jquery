@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rimraf dist && webpack --config ./build/webpack.config.js --env.NODE_ENV=development --mode=development --progress",
+    "build": "rimraf dist && webpack --config ./build/webpack.nohash.config.js --env.NODE_ENV=development --mode=development --progress",
     "build2": "rimraf dist && webpack --config ./build/webpack.config.js --env.NODE_ENV=development --mode=development --progress",
     "dev-network": "webpack-dashboard -- webpack-dev-server --config ./build/webpack.config.js --env.NODE_ENV=development --mode=development --progress --open --host 0.0.0.0",
     "dev": "webpack-dashboard -- webpack-dev-server --config ./build/webpack.config.js -env.NODE_ENV=development --mode=development --progress --open",

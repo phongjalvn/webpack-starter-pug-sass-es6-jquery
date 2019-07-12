@@ -94,7 +94,7 @@ module.exports = env => {
           loader: 'url-loader',
           options: {
             limit: 3000,
-            name: 'assets/images/[name].[hash:7].[ext]'
+            name: '[path][name].[hash:7].[ext]'
           }
         },
         {
