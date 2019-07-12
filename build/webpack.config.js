@@ -8,6 +8,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const DashboardPlugin = require("webpack-dashboard/plugin");
 const Jarvis = require("webpack-jarvis");
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 // Asset path
 const ASSET_PATH = process.env.ASSET_PATH || '/';
@@ -150,6 +151,7 @@ module.exports = env => {
         { from: 'assets/images/favicons/android-chrome-256x256.png', to: 'assets/images/android-chrome-256x256.png' },
         { from: 'assets/images/favicons/mstile-150x150.png', to: 'assets/images/mstile-150x150.png' }
       ]),
+      new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }),
       new MiniCssExtractPlugin({
         filename: 'assets/css/[name].[hash:7].bundle.css',
         chunkFilename: '[id].css',

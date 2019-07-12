@@ -150,6 +150,7 @@ module.exports = env => {
         { from: 'assets/images/favicons/android-chrome-256x256.png', to: 'assets/images/android-chrome-256x256.png' },
         { from: 'assets/images/favicons/mstile-150x150.png', to: 'assets/images/mstile-150x150.png' }
       ]),
+      new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }),
       new MiniCssExtractPlugin({
         filename: 'assets/css/[name].bundle.css',
         chunkFilename: '[id].css',
