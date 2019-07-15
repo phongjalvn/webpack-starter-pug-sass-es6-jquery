@@ -46,6 +46,10 @@ module.exports = env => {
     module: {
       rules: [
         {
+          test: /\.(html)$/,
+          use: ['html-loader-srcset']
+        },
+        {
           test: /\.js$/,
           exclude: [/node_modules/],
           use: [

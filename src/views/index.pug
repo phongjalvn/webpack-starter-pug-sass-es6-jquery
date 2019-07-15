@@ -17,3 +17,8 @@ block content
       a(href="https://www.buymeacoffee.com/edgardo" target="_blank")
         img(src=require('images/favicons/android-chrome-192x192.png') alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;")
         img(src=require('images/android-chrome-192x192.png') alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;")
+
+      picture
+        source(media='(min-width: 650px)', srcset=require('images/favicons/android-chrome-256x256.png'))
+        source(media='(min-width: 465px)', srcset=require('images/favicons/android-chrome-192x192.png'))
+        img(src=require('images/android-chrome-192x192.png'), alt='Flowers', style='width:auto;')
