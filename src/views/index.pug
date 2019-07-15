@@ -13,10 +13,14 @@ block content
   section.page.home__page
     h1.page__title # Index page
     p Thank you for your supporting :)
+    - time = new Date('01 01, 1999');
+    p #{time.toISOString()}
     p
       a(href="https://www.buymeacoffee.com/edgardo" target="_blank")
         img(src=require('images/favicons/android-chrome-192x192.png') alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;")
         img(src=require('images/android-chrome-192x192.png') alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;")
+
+      //- img(src="#{require('images/android-chrome-192x192.png')}", srcset="#{require('images/android-chrome-192x192.png')}")
 
       picture
         source(media='(min-width: 650px)', srcset=require('images/favicons/android-chrome-256x256.png'))
